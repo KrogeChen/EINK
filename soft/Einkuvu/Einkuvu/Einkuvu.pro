@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,10 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    checksumxor.cpp \
+    jqchecksum.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    checksumxor.h \
+    jqchecksum.h
 
 FORMS += \
         mainwindow.ui

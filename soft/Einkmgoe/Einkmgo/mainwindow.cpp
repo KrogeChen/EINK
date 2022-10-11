@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
                         mcuItem.model                = JsItem.value("model").toString();
                         mcuItem.boot                 = JsItem.value("boot").toString();
                         mcuItem.app                  = JsItem.value("app").toString();
-                        mcuItem.upgrade              = JsItem.value("upgrade").toString();
+                        //mcuItem.upgrade              = JsItem.value("upgrade").toString();
                         mcuItem.boot_max_sizeofbyte  = JsItem.value("boot_max_sizeofbyte").toInt();
                         mcuItem.app_max_sizeofbyte   = JsItem.value("app_max_sizeofbyte").toInt();
                         mcuItem.flash_addr_str       = JsItem.value("flash_addr_str").toInt();
@@ -82,7 +82,7 @@ void MainWindow::on_comboBox_currentIndexChanged(int index)
         ui->chipaddr->append("MCU:     " + mcu_info_list[index].model);
         ui->chipaddr->append("boot：   " + mcu_info_list[index].boot);
         ui->chipaddr->append("app:     " + mcu_info_list[index].app);
-        ui->chipaddr->append("upgrade：" + mcu_info_list[index].upgrade);
+        //ui->chipaddr->append("upgrade：" + mcu_info_list[index].upgrade);
     }
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
