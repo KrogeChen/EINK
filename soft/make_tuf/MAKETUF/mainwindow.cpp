@@ -174,8 +174,11 @@ QString Making_BinFile(QString The_Filename)
                  unsigned long i;
                  for(i = 0;i < PoilishLength;i++ )
                  {
-                     //memset(&Bindata[MallocLength-PoilishLength+i],0xff,1);
-                     Bindata[MallocLength-PoilishLength+i] = 0xff;
+                     Bindata[MallocLength-PoilishLength+i] = 0xff; //end data
+                 }
+                 for(i = 0;i < 128;i++ ) //map area，default 0xff
+                 {
+                     Bindata[i] = 0xff;
                  }
 
                  Bindata[0] = 'n';
