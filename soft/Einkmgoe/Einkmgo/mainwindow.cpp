@@ -56,13 +56,30 @@ MainWindow::MainWindow(QWidget *parent) :
                         ui->comboBox->addItem(mcuItem.model);
                     }
                 }
+                else
+                {
+                    QMessageBox msgBox(QMessageBox::Warning, QString::fromUtf8("Error"),QString::fromUtf8("json mculist failed !!"), QMessageBox::Ok, this);
+                                msgBox.exec();
+                    return;
+                }
+            }
+            else
+            {
+                QMessageBox msgBox(QMessageBox::Warning, QString::fromUtf8("Error"),QString::fromUtf8("json format failed !!"), QMessageBox::Ok, this);
+                            msgBox.exec();
+                return;
             }
         }
+        if(0 == ui->comboBox->count())
+        {
+            QMessageBox msgBox(QMessageBox::Warning, QString::fromUtf8("Error"),QString::fromUtf8("Load config.json failed !!"), QMessageBox::Ok, this);
+                        msgBox.exec();
+            return;
+        }
     }
-
-    if(0 == ui->comboBox->count())
+    else
     {
-        QMessageBox msgBox(QMessageBox::Warning, QString::fromUtf8("Error"),QString::fromUtf8("Load config.json failed !!"), QMessageBox::Ok, this);
+        QMessageBox msgBox(QMessageBox::Warning, QString::fromUtf8("Error"),QString::fromUtf8("read config file failed !!"), QMessageBox::Ok, this);
                     msgBox.exec();
         return;
     }
