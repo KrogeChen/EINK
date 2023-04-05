@@ -1,0 +1,32 @@
+{
+  "mculist":
+  [
+    {
+      "model":               "HC32L136K8TA",
+      "boot":                "0x1000",
+      "app":                 "0x1000",
+      "boot_max_sizeofbyte": "0x1000",
+      "app_max_sizeofbyte":  "0x1000",
+      "flash_addr_str":      "0x1000",
+      "flash_resver_data":   "0x1000"
+    },
+    {
+      "model":               "STM8L052R8T6",
+      "boot":                "0x0000",
+      "app":                 "0x1000",
+      "boot_max_sizeofbyte": "1024",
+      "app_max_sizeofbyte":  "2048",
+      "flash_addr_str":      "0",
+      "flash_resver_data":   "255"
+    }  
+    {
+      "model":               "STM8L052RCT6",
+      "boot":                "0x0000",
+      "app":                 "0x1000",
+      "boot_max_sizeofbyte": "1024",
+      "app_max_sizeofbyte":  "2048",
+      "flash_addr_str":      "0",
+      "flash_resver_data":   "255"
+    }  
+  ]
+}
